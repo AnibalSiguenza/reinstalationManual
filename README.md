@@ -27,4 +27,16 @@ Note: this also installs openMPI which can unset the proper behavior of mpi beca
 cd /usr/bin && ll mpi*
 cd /etc/alternatives && ll mpi*
 ```
+The wrong configuration will be as follows (look how mpic++ is pointing to mpich and mpiexec to openmpi):
+![Wrong config](images/badConfiguration.png)
 
+To fix this run:
+```
+cd /etc/alternatives && sudo unlink mpirun && sudo ln -s /usr/bin/mpirun.mpich mpirun
+cd /etc/alternatives && sudo unlink mpiexec && sudo ln -s /usr/bin/mpiexec.mpich mpiexec
+```
+![Correct config](images/correctConfig.png)
+
+## HDF
+
+sudo apt-get install libhdf5-mpich-dev
