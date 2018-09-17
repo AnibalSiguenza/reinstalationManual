@@ -40,3 +40,8 @@ cd /etc/alternatives && sudo unlink mpiexec && sudo ln -s /usr/bin/mpiexec.mpich
 ## HDF
 
 sudo apt-get install libhdf5-mpich-dev
+
+## PETSC
+
+Errase the hole directory and then 
+./configure --with-cc=mpicc --with-cxx=mpic++ --with-fc=mpif90 --download-fblaslapack --with-mpi-dir=/usr/lib/openmpi/include
