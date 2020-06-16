@@ -45,3 +45,12 @@ sudo apt-get install libhdf5-mpich-dev
 
 Errase the hole directory and then 
 ./configure --with-cc=mpicc --with-cxx=mpic++ --with-fc=mpif90 --download-fblaslapack --with-mpi-dir=/usr/lib/openmpi/include
+
+## FZF
+
+Great autocomplete for terminal more info https://github.com/junegunn/fzf
+
+```
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+```
